@@ -1,0 +1,15 @@
+{
+  "name": "express_mongodb_apis",
+  "version": "1.0.0",
+  "description": "This is a backend Learning Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hassan Awan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "underscore": "^1.13.6"
+  }
+}
