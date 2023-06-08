@@ -1,0 +1,41 @@
+<div class="w-100 px-2 mx-1 d-flex justify-content-between items-center">
+  <div></div>
+<a href="products" class="btn btn-success float-right  my-4"> Add to Cart</a>
+</div> 
+
+<div class="mt-4 w-100">
+<table class="table table-striped  m-auto w-75">
+  <thead class="thead thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Price</th>
+      <th scope="col">Action</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <% var total = 0, totalQnty=0; %>
+    <% for(let i in cart){ %>
+        <% total +=Number(cart[i].Price);  %>
+        <% totalQnty +=Number(cart[i].Quantity);  %>
+    <tr>
+      <th scope="row">1</th>
+      <td><%= cart[i].productName %></td>
+      <td><%= cart[i].Quantity %></td>
+      <td><%= cart[i].Price %></td>
+      <td><a href="products/cart/remove/<%= cart[i]._id %>" class="btn btn-danger">remove</a></td>
+    </tr>
+    <% } %>
+    <tr>
+        <td scope="row">99</td>
+        <td class="font-weight-bold text-uppercase">Total</td>
+        <td class="font-weight-bold text-uppercase"><%= totalQnty  %></td>
+        <td class="font-weight-bold text-uppercase"><%= total %></td>
+
+    </tr>
+    
+  </tbody>
+</table>
+</div>

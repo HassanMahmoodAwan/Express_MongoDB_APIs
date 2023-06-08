@@ -32,7 +32,7 @@ app.get("/api/Products/:index", (req, res) => {
     res.send(Products[req.params.index]);
 });
 
-
+// Post, updating, delete will be handle using Postman.
 // Posting  and updating data and checking it using thunder client.
 app.put("/api/Products/:index", (req, res) => {
   console.log(req.body);
